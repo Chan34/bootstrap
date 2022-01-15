@@ -1,0 +1,32 @@
+<div class="row">
+   
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+           
+          <form [formGroup]="loginForm" (ngSubmit)="postData()">
+
+      
+                <label  class="form-label">Username</label>
+                <input type="text" class="form-control"  [formControlName]="'username'" >
+       
+     
+                <label class="form-label">Password</label>
+                <input type="text" class="form-control" [formControlName]="'pw'">
+         
+          
+                <button type="submit" class="btn btn-primary" id="btn" [disabled]="!loginForm.valid" >Submit</button>
+                <!-- routerLink="/home" -->
+                <a href="#" >Forget Password</a>
+          
+        </form>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <a routerLink="/registration">Not a member yet?SignUp now</a>
+    </div>
+
+
+ 
